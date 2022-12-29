@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/gallery.css" />
+    <title>Informatika 1C Pagi</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <nav id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#anggota">Mahasiswa</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#">Extra</a></li>
+        </ul>
+      </nav>
+
+      <div class="main_bg">
+        <div class="blckscr"></div>
+        <!-- <h1>Informatika 1C</h1> -->
+      </div>
+
+      <div class="sec_container" id="anggota">
+        <h1>
+          Mahasiswa
+          <div class="bottom"></div>
+        </h1>
+        <input
+          type="text"
+          name="searchBar"
+          id="searchBar"
+          placeholder="Cari NIM/Nama Mahasiswa"
+        />
+        <div class="card">
+          <div class="card_wrapper" onclick="open_card()"></div>
+        </div>
+        <div class="card_detail">
+          <span class="close_card" onclick="close_card()"
+            ><i class="fas fa-times"></i
+          ></span>
+        </div>
+      </div>
+
+      <h1 id="gallery">Gallery</h1>
+
+      <!-- Ini Gallery -->
+      <div class="gallery_container_parent">
+        <div class="gallery_container">
+          <figure
+            class="gallery_item item_1"
+            onclick="openmodal();currentslide(1)"
+          >
+            <img src="./assets/image/gallery/foto1.jpg" alt="bike_image" />
+          </figure>
+
+          <figure
+            class="gallery_item item_2"
+            onclick="openmodal();currentslide(2)"
+          >
+            <img src="./assets/image/gallery/foto2.jpg" alt="phone_image" />
+          </figure>
+
+          <figure
+            class="gallery_item item_3"
+            onclick="openmodal();currentslide(3)"
+          >
+            <img
+              src="./assets/image/gallery/IMG-20220927-WA0018.jpg"
+              alt="car_image"
+            />
+          </figure>
+
+          <figure
+            class="gallery_item item_4"
+            onclick="openmodal();currentslide(4)"
+          >
+            <img
+              src="./assets/image/gallery/IMG-20220927-WA0025.jpg"
+              alt="truck_image"
+            />
+          </figure>
+
+          <figure
+            class="gallery_item item_5"
+            onclick="openmodal();currentslide(5)"
+          >
+            <img
+              src="./assets/image/gallery/IMG-20220927-WA0027.jpg"
+              alt="bike_image"
+            />
+          </figure>
+
+          <figure
+            class="gallery_item item_6"
+            onclick="openmodal();currentslide(6)"
+          >
+            <img
+              src="./assets/image/gallery/IMG-20220927-WA0029.jpg"
+              alt="phome_image"
+            />
+          </figure>
+
+          <figure
+            class="gallery_item item_7"
+            onclick="openmodal();currentslide(7)"
+          >
+            <img
+              src="./assets/image/gallery/IMG-20220927-WA0038.jpg"
+              alt="truck_image"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <!-- Ini Lightbox  -->
+      <div class="lightbox_container">
+        <i class="fas fa-times" id="close"></i>
+        <div class="parent_navigation">
+          <span class="prev" id="ripple">&#10094;</span>
+          <span class="next" id="ripple">&#10095;</span>
+        </div>
+
+        <figure class="lightbox_item">
+          <img src="./assets/image/gallery/foto1.jpg" alt="bike_image" />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img src="./assets/image/gallery/foto2.jpg" alt="phone_image" />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img
+            src="./assets/image/gallery/IMG-20220927-WA0018.jpg"
+            alt="car_image"
+          />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img
+            src="./assets/image/gallery/IMG-20220927-WA0025.jpg"
+            alt="truck_image"
+          />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img
+            src="./assets/image/gallery/IMG-20220927-WA0027.jpg"
+            alt="bike_image"
+          />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img
+            src="./assets/image/gallery/IMG-20220927-WA0029.jpg"
+            alt="phome_image"
+          />
+        </figure>
+
+        <figure class="lightbox_item">
+          <img
+            src="./assets/image/gallery/IMG-20220927-WA0038.jpg"
+            alt="truck_image"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <!-- <script>
+      function open_card(id) {
+        // container2.classList.add("show");
+        console.log(id)
+      }
+    </script> -->
+
+    <script src="./js/data.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/hugo.js"></script>
+  </body>
+</html>
